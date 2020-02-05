@@ -1,14 +1,14 @@
-def second_max(number):
-    i = 0
-    max_num = number[0]
-    sec_max = number[1]
-    while i < len(number):
-        if number[i] > max_num:
-            max_num = number[i]
-        else:
-            if number[i] > sec_max:
-                sec_max = number[i]    
-        i = i +1
-    return sec_max
-numbers = [-50, -40, -23, -70, -56, -12, 5, 10, 7]    
-print (second_max(numbers))         
+list1 = [2,3,4,5,6] 
+  
+max=max(list1[0],list1[1]) 
+secondmax=min(list1[0],list1[1]) 
+  
+for i in range(2,len(list1)): 
+    if list1[i]>max: 
+        secondmax=max
+        max=list1[i] 
+    else: 
+        if list1[i]>secondmax: 
+            secondmax=list1[i] 
+  
+print(str(secondmax))    
